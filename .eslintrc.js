@@ -15,11 +15,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2021,
     sourceType: 'module',
-    ecmaFeatures: {
-      jsx: true,
-    },
   },
-  plugins: [ 'import', ],
+  plugins: [ 'import', 'html', ],
   rules: {
     // 일반 규칙
     'no-console': 'off',
@@ -56,20 +53,17 @@ module.exports = {
       exports: 'never',
     }, ],
     'jsx-quotes': [ 'error', 'prefer-single', ],
-    'linebreak-style': [ 'warn', 'windows', ],
+    'linebreak-style': 'off',
+    'prefer-const': 'off',
     'max-len': 'off',
-    'lines-between-class-members': 'off',
-    'no-underscore-dangle': 'off',
+    'no-else-return': 'off',
+    'global-require': 'off',
 
     // 임포트 규칙
-    'import/extensions': [ 'error', 'never', {
-      ignorePackages: true,
-      pattern: {
-        json: 'always',
-      },
-    }, ],
+    'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
+    'import/no-dynamic-require': 'off',
     'import/prefer-default-export': 'off',
   },
 };
